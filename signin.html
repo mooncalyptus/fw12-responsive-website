@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_sign.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Ticktiz</title>
+</head>
+<body>
+    <main class="auth-wrap">
+    <section>
+        <div class="overlay">
+            <img src="assets/logo.png" alt="Logo">
+            <div>wait, watch, wow!</div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <span>Sign In</span>
+            <p>Sign in with your data that you entered during
+                your registration</p>
+        </div>
+        <form class="auth-form" action="home_in.html">
+        <div>
+            <label for="email">Email</label>
+            <input type="password" name="email" id="email" placeholder="write your email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="write your password">
+            <div>
+            <i data-feather="eye"></i>
+            </div>
+        </div>
+        <div>
+            <button class="btn-primary" type="submit">Sign In</button>
+            <div>
+                <span class="text-first">Forgot your password? <a href="forgot_password.html"> Reset Now</a></span>
+                <span class="text-second">Don’t have an account? <a href="signup.html"> Sign up</a></span>
+            </div>
+        </div>
+        </form>
+    </section>
+</main>
+<script>
+      feather.replace()
+</script>
+</body>
+</html>

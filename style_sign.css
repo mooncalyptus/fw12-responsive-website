@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+html{
+    font-size: 16px;
+}
+body{
+    margin: 0;
+    font-family: 'Inter';
+}
+a{
+    color: #5F2EEA;
+}
+.auth-wrap{
+    display: flex;
+    height: 100vh;
+    }
+.auth-wrap section{
+    position: relative;
+    overflow: hidden;
+}
+.auth-wrap section:nth-child(1){
+    background-image: url('assets/bg.png');
+    background-size: cover;
+    flex: 2;
+}
+.auth-wrap section:nth-child(2){
+    padding: 95px 83px;
+    overflow: scroll;
+    overflow-x: hidden;
+    flex: 1;
+}
+.auth-wrap section:nth-child(2) > div > span{
+    font-family: 'Inter';
+    font-size: 48px;
+    font-weight: bold;
+}
+.auth-wrap section:nth-child(2) > div > p{
+    color: #AAAAAA;
+}
+.auth-wrap .overlay{
+    background-color: #2B156B;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+font-size: 3rem;
+line-height: 50px;
+letter-spacing: 0.003em;
+color: rgba(255, 255, 255, 0.8);
+}
+.auth-wrap .overlay img{
+    width: 80%;
+    height: auto;
+}
+.auth-wrap .overlay.column{
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 100px;
+}
+.auth-wrap .overlay.column img{
+    width: 200px;
+    height: auto;
+}
+.auth-wrap .overlay.column p{
+    font-size: 16px;
+    height: auto;
+    line-height: 1;
+}
+.auth-wrap .overlay.column .bullet{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    position: relative;
+    margin-bottom: 20px;
+}
+.auth-wrap .overlay.column .bullet.active{
+    background-color: #fff;
+    color: #5F2EEA;
+}
+.auth-wrap .overlay.column .bullet::after{
+    content: "";
+    height: 20px;
+    border-left: 2px solid white;
+    position: absolute;
+    bottom: -20px;
+}
+.bullet-finished{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    position: relative;
+    margin-bottom: 20px;
+}
+.auth-wrap .overlay.column .items{
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+}
+.auth-wrap .overlay.column .items span{
+ font-family: 'Mulish';
+ font-size: 16px;
+}
+.auth-form div{
+    margin-bottom: 25px;
+    position: relative;
+}
+.text-first{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.text-reset{
+    font-family: 'Mulish';
+}
+.text-reset > div{
+    font-family: 'Mulish';
+    font-size: 30px;
+    font-weight: 700;
+}
+.auth-form label{
+    display: block; 
+    margin-bottom: 12px;  
+    border-radius: 4px;
+    font-family: 'Mulish';
+    font-size: 16px;
+    color: #4E4B66;
+}
+.auth-form input{
+display: block;
+width: 100%;
+height: 40px;
+border-radius: 16px;
+padding: 0px 24px;
+border: 1px solid #A0A3BD;
+box-sizing: border-box;
+}
+.btn-primary{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 14px;
+    border: 0px;
+    background-color: #5F2EEA;
+    color: white;
+}
+.auth-form .btn-primary ~ div{
+text-align: center;
+margin-top: 32px;
+width: 270px;
+margin-left: 50px;
+}
+.auth-form .btn-primary ~ div > span{
+    color: #8692A6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#password ~ div{
+position: absolute;
+right: 29px;
+top: 40px;
+color: #A0A3BD;
+}
+.step{
+    display: flex;
+}
+.step > span{
+    font-family: 'Mulish';
+    font-size: 18px;
+    margin-left: 15px;
+}
+@media(max-width: 575px){
+.auth-wrap .overlay{
+    font-size: 16px;
+}
+.auth-wrap section:nth-child(1){
+    display: none;
+}
+.auth-wrap section:nth-child(2){
+    padding: 80px 20px;
+}
+}
+
+@media(min-width: 576px){
+.auth-wrap .overlay{
+    font-size: 20px;
+}
+}
+
+@media(min-width: 768px){
+    .auth-wrap .overlay{
+        font-size: 20px;
+    }
+}
+@media (min-width: 992px){
+    .auth-wrap .overlay{
+        font-size: 30px;
+    }
+}

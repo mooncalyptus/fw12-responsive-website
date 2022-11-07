@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_sign.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Ticktiz</title>
+</head>
+<body>
+    <main class="auth-wrap">
+    <section>
+        <div class="overlay">
+            <img src="assets/logo.png" alt="Logo">
+            <div>wait, watch, wow!</div>
+        </div>
+    </section>
+    <section>
+        <div>
+           <span> Sign Up</span>
+            <p>Fill your additional details</p>
+        </div>
+        <form class="auth-form" action="signin.html">
+            <div class="title">
+            <label for="firstName">Firstname</label>
+            <input type="text" name="firstName" id="firstName" placeholder="write your firstname">
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="write your last name">
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" id="phone" placeholder="write your phone number">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="password" name="email" id="email" placeholder="write your email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="write your password">
+            <div>
+            <i data-feather="eye"></i>
+            </div>
+        </div>
+        <div>
+            <button class="btn-primary" type="submit">Sign Up</button>
+            <div>
+                <span>Already have account? <a href="signin.html"> Sign in</a></span>
+            </div>
+        </div>
+        </form>
+    </section>
+</main>
+<script>
+      feather.replace()
+</script>
+</body>
+</html>
