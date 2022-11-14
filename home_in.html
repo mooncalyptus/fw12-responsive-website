@@ -74,57 +74,7 @@
             <button>August</button>
         </div>
     </div>
-    <div class="movie-upcoming">
-        <div class="list-movie">
-            <img src="assets/upcoming-1.png" alt="" srcset="">
-            <div class="text">
-            <div>Black Widow</div>
-            <div>Action, Adventure, Sci-Fi</div>
-            </div>
-            <div class="btn">
-            <button>Details</button>
-            </div>
-        </div>
-        <div class="list-movie">
-            <img src="assets/upcoming-2.png" alt="" srcset="">
-            <div class="text">
-            <div>The Witches</div>
-            <div>Adventure, Comedy, Family</div>
-            </div>
-            <div class="btn">
-            <button>Details</button>
-            </div>
-        </div>
-        <div class="list-movie">
-            <img src="assets/upcoming-3.png" alt="" srcset="">
-            <div class="text">
-            <div>Black Widow</div>
-            <div>Action, Adventure, Sci-Fi</div>
-            </div>
-            <div class="btn">
-            <button>Details</button>
-            </div>
-        </div>
-        <div class="list-movie">
-            <img src="assets/upcoming-1.png" alt="" srcset="">
-            <div class="text">
-            <div>Black Widow</div>
-            <div>Action, Adventure, Sci-Fi</div>
-            </div>
-            <div class="btn">
-            <button>Details</button>
-            </div>
-        </div>
-        <div class="list-movie">
-            <img src="assets/upcoming-2.png" alt="" srcset="">
-            <div class="text">
-            <div>Black Widow</div>
-            <div>Action, Adventure, Sci-Fi</div>
-            </div>
-            <div class="btn">
-            <button>Details</button>
-            </div>
-        </div>
+    <div id="movie-upcoming" class="movie-upcoming">
     </div>
     </section>
     <section class="join-member">
@@ -202,6 +152,73 @@
     </footer>
     <script>
         feather.replace()
+        //HTML element
+        const movieUpcoming = document.getElementById('movie-upcoming');
+
+        //array of object data movie
+        const data = [
+            {
+                img: "assets/upcoming-1.png",
+                title: "Black Widow",
+                genre: "Action, Adventure Sci-Fi"
+            },
+            {
+                img: "assets/upcoming-2.png",
+                title: "The Witches",
+                genre: "Adventure, Comedy, Family"
+            },
+            {
+                img: "assets/upcoming-3.png",
+                title: "Tenet",
+                genre: "Action, Sci-fi"
+            },
+            {
+                img: "assets/upcoming-1.png",
+                title: "Black Widow",
+                genre: "Action, Adventure Sci-Fi"
+            },
+            {
+                img: "assets/upcoming-2.png",
+                title: "The Witches",
+                genre: "Adventure, Comedy, Family"
+            },
+            {
+                img: "assets/upcoming-3.png",
+                title: "Tenet",
+                genre: "Action, Sci-fi"
+            }
+        ]
+
+        //forEach untuk mengambil data dari array ke dalam elemen HTML
+        data.forEach((details) => {
+        const listMovie = document.createElement('div');
+        listMovie.className = "list-movie";
+        movieUpcoming.appendChild(listMovie); //added list movie as child of movie upcoming
+        const pic = document.createElement('div');
+        pic.className = "pic"
+        const img = document.createElement('img');
+        img.src = details.img
+        pic.appendChild(img)
+        listMovie.appendChild(pic)
+        const title = document.createElement('div');
+        title.className = "title";
+        title.textContent = details.title
+        listMovie.appendChild(title);
+        const genre = document.createElement('div');
+        genre.className = "genre";
+        genre.textContent = details.genre;
+        listMovie.appendChild(genre);
+        const divButton = document.createElement('div');
+        divButton.className = "div-button";
+        listMovie.appendChild(divButton);
+        const btn = document.createElement('button');
+        btn.className = "btn";
+        btn.textContent = "Details";
+        btn.addEventListener("click", () => {
+            location = "movie_details.html";
+        })
+        divButton.appendChild(btn)
+        })
   </script>
 </body>
 </html>

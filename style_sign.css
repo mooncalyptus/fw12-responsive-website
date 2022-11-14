@@ -157,6 +157,7 @@ box-sizing: border-box;
     border: 0px;
     background-color: #5F2EEA;
     color: white;
+    cursor: pointer;
 }
 .auth-form .btn-primary ~ div{
 text-align: center;
@@ -210,4 +211,23 @@ color: #A0A3BD;
     .auth-wrap .overlay{
         font-size: 30px;
     }
+}
+
+/* CSS ALERT */
+.alert{
+    display: flex;
+    justify-content: center;
+}
+.body-alert{
+    background-color: #A0A3BD;
+    width: 300px;
+    height: 100px;
+    border-radius: 4px;
+}
+.body-alert > div{
+    display: flex;
+    justify-content: center;
+}
+.body-alert > div > span{
+    font-family: 'Mulish';
 }

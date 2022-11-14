@@ -22,14 +22,14 @@
             <p>Sign in with your data that you entered during
                 your registration</p>
         </div>
-        <form class="auth-form" action="home_in.html">
+        <form id="login-form" class="auth-form">
         <div>
             <label for="email">Email</label>
-            <input type="password" name="email" id="email" placeholder="write your email">
+            <input type="text" name="email" id="email" placeholder="write your email" value="">
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="write your password">
+            <input type="password" name="password" id="password" placeholder="write your password" value="">
             <div>
             <i data-feather="eye"></i>
             </div>
@@ -46,6 +46,15 @@
 </main>
 <script>
       feather.replace()
+      const formLogin = document.getElementById('login-form');
+      formLogin.addEventListener('submit' , (event) => {
+        if(event.target.email.value === "rania123@gmail.com" && event.target.password.value === "1234"){
+            window.location = "home_in.html";
+        } else{
+            alert('Email / password salah');
+        }
+        event.preventDefault();
+      })
 </script>
 </body>
 </html>
