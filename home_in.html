@@ -155,7 +155,11 @@
 
         //HTML element now showing movie
         const content = document.getElementById('content');
-
+        const movieGrid = document.createElement('div');
+        movieGrid.className = 'movie-grid';
+        const image = document.createElement('img');
+        movieGrid.appendChild(image);
+        
         //array of object now showing movie
         const picture = [
             {
