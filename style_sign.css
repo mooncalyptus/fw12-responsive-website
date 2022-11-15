@@ -36,6 +36,8 @@ a{
 }
 .auth-wrap section:nth-child(2) > div > p{
     color: #AAAAAA;
+    font-family: 'Inter';
+    font-size: 18px;
 }
 .auth-wrap .overlay{
     background-color: #2B156B;
@@ -121,6 +123,7 @@ color: rgba(255, 255, 255, 0.8);
     position: relative;
 }
 .text-first{
+    font-family: 'Inter';
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -138,13 +141,14 @@ color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     font-family: 'Mulish';
     font-size: 16px;
+    font-weight: 400;
     color: #4E4B66;
 }
 .auth-form input{
 display: block;
 width: 100%;
 height: 40px;
-border-radius: 16px;
+border-radius: 4px;
 padding: 0px 24px;
 border: 1px solid #A0A3BD;
 box-sizing: border-box;
@@ -153,9 +157,10 @@ box-sizing: border-box;
     display: block;
     width: 100%;
     height: 50px;
-    border-radius: 14px;
+    border-radius: 4px;
     border: 0px;
     background-color: #5F2EEA;
+    font-family: 'Mulish';
     color: white;
     cursor: pointer;
 }
@@ -181,8 +186,17 @@ color: #A0A3BD;
 }
 .step > span{
     font-family: 'Mulish';
-    font-size: 18px;
+    font-size: 24px;
     margin-left: 15px;
+}
+.fill-text{
+    font-family: 'Mulish';
+    font-size: 26px;
+    font-weight: 700;
+}
+.p-details{
+    font-family: 'Mulish';
+    font-size: 18px;
 }
 @media(max-width: 575px){
 .auth-wrap .overlay{
