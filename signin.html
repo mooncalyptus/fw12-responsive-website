@@ -17,7 +17,13 @@
         </div>
     </section>
     <section>
-        <div>
+        <div id="alert-success" class="alert-success">
+            Berhasil Login
+        </div>
+        <div id="alert-failed" class="alert-failed">
+            Password/Email Salah
+        </div>
+        <div class="sign">
             <span>Sign In</span>
             <p>Sign in with your data that you entered during
                 your registration</p>
@@ -47,11 +53,19 @@
 <script>
       feather.replace()
       const formLogin = document.getElementById('login-form');
+      const alertFailed = document.getElementById('alert-failed');
+      const alertSuccess = document.getElementById('alert-success');
       formLogin.addEventListener('submit' , (event) => {
         if(event.target.email.value === "rania123@gmail.com" && event.target.password.value === "1234"){
-            window.location = "home_in.html";
+            alertSuccess.style.display = "flex"
+            setTimeout(() => {
+                window.location = "home_in.html";
+            },3000)
         } else{
-            alert('Email / password salah');
+            alertFailed.style.display = "flex";
+            setTimeout(() => {
+                alertFailed.style.display = "none";
+            },3000);
         }
         event.preventDefault();
       })
