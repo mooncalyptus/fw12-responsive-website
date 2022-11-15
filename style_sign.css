@@ -231,3 +231,18 @@ color: #A0A3BD;
 .body-alert > div > span{
     font-family: 'Mulish';
 }
+
+
+/* CSS TES GRID */
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-rows: 430px 430px;
+    background-color: tomato;
+}
+.view-grid{
+    display: flex;
+    flex-direction: column;
+    background-color: #A0A3BD;
+    color: white;
+}
