@@ -11,6 +11,8 @@
     margin: 0px 20px;
     color: black;
     text-decoration: none;
+    font-family: 'Mulish';
+    font-size: 16px;
 }
 .nav-bar .brand{
     margin-right: 20px;
@@ -29,8 +31,12 @@
     width: 120px;
     height: 40px;
     background-color: #5F2EEA;
+    font-family: 'Mulish';
+    font-size: 14px;
     color: #fff;
     border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .btn-details > button{
     width: 159px;
@@ -61,11 +67,13 @@ section.heading > div{
 }
 section.heading div:nth-child(1) h1{
     color: #5F2EEA;
+    font-family: 'Mulish';
     font-size: 56px;
     margin: 0;
 }
 section.heading div:nth-child(1) p{
     color: #6E7191;
+    font-family: 'Mulish';
     font-size: 24px;
 }
 section.month-movie {
@@ -201,6 +209,13 @@ section.month-movie > div:nth-child(3) > .container{
 .now-showing .heading > div:nth-child(1){
     flex: 1;
 }
+.now-showing .heading > div:nth-child(2) > a{
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #5F2EEA;
+}
 .bordered-b{
     font-family: 'Mulish';
     font-size: 24px;
@@ -214,7 +229,6 @@ section.month-movie > div:nth-child(3) > .container{
     margin-top: 30px;
     width: 100%;
     display: flex;
-    overflow-x: scroll;
 }
 .now-showing .content > div{
      width: fit-content;
@@ -227,6 +241,7 @@ section.month-movie > div:nth-child(3) > .container{
     border-radius: 8px;
     margin-left: 12px;
     margin-right: 12px;
+    margin-bottom: 20px;
 }
 section.upcoming{
     padding: 52px 130px;
@@ -234,6 +249,7 @@ section.upcoming{
 section.upcoming > div{
     font-family: 'Mulish';
     font-size: 24px;
+    font-weight: 700px;
 }
 #path{
     display: flex;
@@ -248,6 +264,9 @@ section.upcoming .button-upcoming{
 }
 section.upcoming div button{
     background-color: #fff;
+    font-family: 'Mulish';
+    font-size: 14px;
+    font-weight: 600;
     color: #5F2EEA;
     padding: 0px 20px;
     margin-left: 16px;
@@ -321,13 +340,14 @@ section.join-member .join-first{
 section.join-member .join-first > div:nth-child(1){
     font-family: 'Mulish';
     font-size: 24px;
+    font-weight: 400;
     color: #4E4B66;
 }
 section.join-member .join-first > div:nth-child(2){
     font-family: 'Mulish';
     font-size: 48px;
     color: #5F2EEA;
-    font-weight: bold;
+    font-weight: 700;
 }
 section.join-member .join-second{
     display: flex;
@@ -339,6 +359,7 @@ section.join-member .join-second input{
     width: 306px;
     height: 53px;
     border: 2px solid #DEDEDE;
+    border-radius: 4px;
     margin-right: 16px;
     padding: 0px 15px;
 }
@@ -347,17 +368,21 @@ section.join-member .join-second button{
     color: white;
     width: 120px;
     height: 53px;
+    border-radius: 4px;
     border: none;
 }
 section.join-member .join-third{
     text-align: center;
     margin-top: 40px;
     font-family: 'Mulish';
+    font-size: 14px;
     color: #6E7191;
 }
 .site-footer{
     margin-top: 96px;
     padding: 80px 130px;
+    font-family: 'Mulish';
+    font-size: 16px;
     color: #6E7191;
 }
 .site-footer > div:nth-child(1){
