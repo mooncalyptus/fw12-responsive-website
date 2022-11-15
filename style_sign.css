@@ -214,20 +214,26 @@ color: #A0A3BD;
 }
 
 /* CSS ALERT */
-.alert{
-    display: flex;
-    justify-content: center;
-}
-.body-alert{
-    background-color: #A0A3BD;
-    width: 300px;
-    height: 100px;
-    border-radius: 4px;
-}
-.body-alert > div{
-    display: flex;
-    justify-content: center;
-}
-.body-alert > div > span{
+section div.alert-success{
+    background-color: #C6EBC5;
+    font-size: 14px;
     font-family: 'Mulish';
+    height: 5vh;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+section div.alert-failed{
+    background-color: #FA7070;
+    font-size: 14px;
+    font-family: 'Mulish';
+    color: #fff;
+    height: 5vh;
+    border-radius: 4px;
+    display: flex;
+justify-content: center;
+align-items: center;
+display: none;
 }
