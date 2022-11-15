@@ -76,7 +76,12 @@ section.month-movie > div{
 }
 section.month-movie > div > div:nth-child(1){
     margin-top: 48px;
-    padding-left: 76px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 24px;
+    /* padding-left: 76px; */
 }
 section.month-movie > div > div:nth-child(2){
     margin-top: 48px;
@@ -128,15 +133,15 @@ section.month-movie > div > div:nth-child(1){
 section.month-movie > div > div:nth-child(2){
     padding-right: 70px;
 }
-section.month-movie > div:nth-child(3) > .container{
+/* section.month-movie > div:nth-child(3) > .container{
     background-color: #fff;
     width: 50%;
     margin: 48px 76px;
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 16px 32px 0px #BABABA;
-}
-section.month-movie > div:nth-child(3) > .container > div{
+} */
+/* section.month-movie > div:nth-child(3) > .container > div{
     background-color: white;
     padding: 33px 32px;
     margin-left: 20px;
@@ -148,6 +153,18 @@ section.month-movie > div:nth-child(3) > .container > div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} */
+.container{
+    background-color: tomato;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 24px;
+}
+.view-grid{
+    display: inline-block;
+    background-color: #5F2EEA;
 }
 .container > div > .text-title {
     font-weight: bold;
@@ -515,8 +532,8 @@ section.showtimes > div:nth-child(2) > select{
     background-color: #DEDEDE;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     margin-top: 24px;
 }
 .book-ticket > .ticketing{
