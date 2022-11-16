@@ -229,6 +229,7 @@ section.month-movie > div:nth-child(3) > .container{
     margin-top: 30px;
     width: 100%;
     display: flex;
+    overflow-x: scroll;
 }
 .now-showing .content > div{
      width: fit-content;
@@ -242,6 +243,21 @@ section.month-movie > div:nth-child(3) > .container{
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 20px;
+}
+.now-showing .movie-grid:hover{
+    background-color: #F5F6F8;
+    display: inline-block;
+    border: 0.5px solid #DEDEDE;
+    border-radius: 8px;
+    /* margin: 20px 24px; */
+}
+.movie-grid .div-button .btn{
+    width: 100px;
+    height: 33px;
+    margin-top: 18px;
+    border: 1px solid #5F2EEA;
+    background-color: #fff;
+    color: #5F2EEA;
 }
 section.upcoming{
     padding: 52px 130px;
@@ -297,6 +313,7 @@ section.upcoming .movie-upcoming .list-movie{
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    font-family: 'Mulish';
 }
 .genre{
     display: flex;
