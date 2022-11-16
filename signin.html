@@ -23,6 +23,9 @@
         <div id="alert-failed" class="alert-failed">
             Password/Email Salah
         </div>
+        <div id="alert-notif" class="alert-notif">
+            Password/Email belum diisi
+        </div>
         <div class="sign">
             <span>Sign In</span>
             <p>Sign in with your data that you entered during
@@ -55,8 +58,15 @@
       const formLogin = document.getElementById('login-form');
       const alertFailed = document.getElementById('alert-failed');
       const alertSuccess = document.getElementById('alert-success');
+      const alertNotif = document.getElementById('alert-notif');
       formLogin.addEventListener('submit' , (event) => {
-        if(event.target.email.value === "rania123@gmail.com" && event.target.password.value === "1234"){
+        if(event.target.email.value === "" || event.target.password.value === ""){
+            alertNotif.style.display = "flex"
+            setTimeout(() => {
+                alertNotif.style.display = "none";
+            },3000);
+        }
+        else if(event.target.email.value === "rania123@gmail.com" && event.target.password.value === "1234"){
             alertSuccess.style.display = "flex"
             setTimeout(() => {
                 window.location = "home_in.html";
