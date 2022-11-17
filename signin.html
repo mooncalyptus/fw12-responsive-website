@@ -17,6 +17,7 @@
         </div>
     </section>
     <section>
+        <!-- alert -->
         <div id="alert-success" class="alert-success">
             Berhasil Login
         </div>
@@ -55,28 +56,34 @@
 </main>
 <script>
       feather.replace()
+      //mengambil data elemen dengan menggunakan id
       const formLogin = document.getElementById('login-form');
       const alertFailed = document.getElementById('alert-failed');
       const alertSuccess = document.getElementById('alert-success');
       const alertNotif = document.getElementById('alert-notif');
+      //melakukan validasi dengan menggunakan event submit yang ada pada button
       formLogin.addEventListener('submit' , (event) => {
+        //jika value email atau password kosong maka akan muncul alert notif
         if(event.target.email.value === "" || event.target.password.value === ""){
             alertNotif.style.display = "flex"
             setTimeout(() => {
                 alertNotif.style.display = "none";
             },3000);
         }
+        //jika value email dan password benar maka akan muncul alert success dan diarahkan menuju homepage
         else if(event.target.email.value === "rania123@gmail.com" && event.target.password.value === "1234"){
             alertSuccess.style.display = "flex"
             setTimeout(() => {
                 window.location = "home_in.html";
             },3000)
+            //jika kedua kondisi diatas terpenuhi maka akan muncul alert failed
         } else{
             alertFailed.style.display = "flex";
             setTimeout(() => {
                 alertFailed.style.display = "none";
             },3000);
         }
+        //digunakan untuk mencegah auto refresh pada page ketika sedang dijalankan
         event.preventDefault();
       })
 </script>
