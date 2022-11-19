@@ -932,3 +932,10 @@ section.container-payment{
     border-bottom: 2px solid black;
 }
 /* CSS PAYMENT PAGE END */
+
+/* CSS IMAGE API */
+.image-api{
+    width: 159px;
+    height: 244px;
+}
+/* CSS IMAGE API END */
