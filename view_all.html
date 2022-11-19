@@ -124,78 +124,42 @@
      </footer>
     <script>
         feather.replace()
-        const gridWrapper = document.getElementById('grid-wrapper');
+            const gridWrapper = document.getElementById('grid-wrapper');
+            const getData = fetch('https://ghibliapi.herokuapp.com/films/')
 
-        //array of object data view all and get data for HTML element
-        const data = [
-        {
-                img: "assets/upcoming-1.png",
-                title: "Black Widow",
-                genre: "Action, Adventure Sci-Fi"
-            },
-            {
-                img: "assets/upcoming-2.png",
-                title: "The Witches",
-                genre: "Adventure, Comedy, Family"
-            },
-            {
-                img: "assets/upcoming-3.png",
-                title: "Tenet",
-                genre: "Action, Sci-fi"
-            },
-            {
-                img: "assets/upcoming-1.png",
-                title: "Black Widow",
-                genre: "Action, Adventure Sci-Fi"
-            },
-            {
-                img: "assets/upcoming-2.png",
-                title: "The Witches",
-                genre: "Adventure, Comedy, Family"
-            },
-            {
-                img: "assets/upcoming-3.png",
-                title: "Tenet",
-                genre: "Action, Sci-fi"
-            },
-            {
-                img: "assets/upcoming-1.png",
-                title: "Black Widow",
-                genre: "Action, Adventure Sci-Fi"
-            },
-            {
-                img: "assets/upcoming-2.png",
-                title: "The Witches",
-                genre: "Adventure, Comedy, Family"
+            const proses = async ()=> {
+                const results = await getData;
+                const data = await results.json();
+
+            data.slice(0,8).forEach((details) => {
+            const viewGrid = document.createElement('div');
+            viewGrid.className = "view-grid";
+            gridWrapper.appendChild(viewGrid);
+            const pic = document.createElement('div');
+            pic.className = "pic";
+            viewGrid.appendChild(pic)
+            const img = document.createElement('img');
+            img.className = "image-api";
+            img.src = details.image;
+            pic.appendChild(img);
+            const title = document.createElement('div');
+            title.className = "title"
+            title.textContent = details.title;
+            viewGrid.append(title);
+            const genre = document.createElement('div');
+            genre.className = "genre";
+            genre.textContent = details.release_date;
+            viewGrid.appendChild(genre);
+            const divButton = document.createElement('div');
+            divButton.className = "div-button"
+            viewGrid.appendChild(divButton);
+            const btn = document.createElement('button');
+            btn.className = "btn"
+            btn.textContent = "Details"
+            divButton.appendChild(btn)
+                })
             }
-        ]
-
-        data.forEach((details) => {
-        const viewGrid = document.createElement('div');
-        viewGrid.className = "view-grid";
-        gridWrapper.appendChild(viewGrid);
-        const pic = document.createElement('div');
-        pic.className = "pic";
-        viewGrid.appendChild(pic)
-        const img = document.createElement('img');
-        img.src = details.img;
-        pic.appendChild(img);
-        const title = document.createElement('div');
-        title.className = "title"
-        title.textContent = details.title;
-        viewGrid.append(title);
-        const genre = document.createElement('div');
-        genre.className = "genre";
-        genre.textContent = details.genre;
-        viewGrid.appendChild(genre);
-        const divButton = document.createElement('div');
-        divButton.className = "div-button"
-        viewGrid.appendChild(divButton);
-        const btn = document.createElement('button');
-        btn.className = "btn"
-        btn.textContent = "Details"
-        divButton.appendChild(btn)
-        })
-  </script>
+            proses();
+            </script>
 </body>
 </html>
