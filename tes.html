@@ -4,63 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <div id="container">
-        </div>
-    </div>
-    <script>
-        // getData.then((results) => {
-            //    return results.json()
-            //    .then((res) => {
-                //     console.log(res);
-                //         container.textContent = res.title;
-                //     })
-                // })
-                
-                /*penggunaan then dan catch dalam proses API
-                getData.then((results) => {
-    return results.json();
-})
-.then((response) => {
-    if(!response.error){
-        container.textContent = response.original_title_romanised;
-    } else{
-        console.log('Error Happened')
-    }
-})
-.catch((err) => {
-    console.log(err);
-})*/
-
-// Penggunaan  Async Await
-// async await dengan variabel
-const container = document.getElementById('container');
-const getData = fetch('https://ghibliapi.herokuapp.com/films/')
-const proses = async ()=> {
-    const results = await getData;
-    const data = await results.json();
-    // console.log(data);
-    data.slice(0,8).forEach((details) => {
-        const {title} = details;
-        console.log(title)
-        const pic = document.createElement('div');
-        const img = document.createElement('img');
-        img.src = details.image;
-        pic.appendChild(img);
-        container.appendChild(pic)
-        const abc = document.createElement('div');
-        abc.innerText = details.title;
-        const coba = document.createElement('div');
-        coba.innerText = details.original_title_romanised;
-        container.appendChild(coba);
-        container.appendChild(abc);
-    })
-}
-proses();
-
     </script>
 </body>
 </html>
