@@ -942,7 +942,128 @@ section.container-payment{
 /* CSS IMAGE API END */
 
 /* CSS MEDIA QUERIES */
+/* MEDIA QUERIES INDEX.HTML */
 @media (max-width: 576px){
+    html {
+        overflow: hidden;
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: relative;
+    }
+    nav.nav-bar{
+        display: flex;
+        padding: 0px 0px;
+        margin-left: 25px;
+        margin-top: 33px;
+    }
+    .nav-bar .link a{
+        display: none;
+    }
+    .btn-signup{
+        display: none;
+    }
+    .logo{
+        display: flex;
+        padding-right: 0px;
+    }
+    section.heading{
+        display: flex;
+        flex-direction: column;
+        margin-top: 57px;
+    }
+    section.heading > div:nth-child(1) > p{
+        margin: 0px 0px;
+        font-family: 'Mulish';
+        font-size: 14px;
+    }
+    section.heading > div:nth-child(1) > h1{
+        font-size: 48px;
+        font-family: 'Mulish';
+        font-weight: 700;
+    }
+    section.heading > div:nth-child(2) > img{
+        margin-left: 15px;
+    }
+    .now-showing{
+        padding: 0px 0px;
+        margin: 0px 0px;
+        background-color: #D6D8E7;
+    }
+    .now-showing > .heading{
+        margin-left: 24px;
+        margin-right: 24px;
+        padding-top: 48px;
+    }
+    .content{
+        overflow-x: scroll;
+    }
+    .now-showing .movie-grid{
+        background-color: #D6D8E7;
+    }
+    .bordered-b{
+        margin-left: 20px;
+    }
+    section.upcoming{
+        padding: 0px 0px;
+        margin-top: 80px;
+        margin-left: 24px;
+    }
+    section.join-member{
+        display: flex;
+        justify-content: center;
+        margin-top: 72px;
+    }
+    section.join-member > .div-join{
+        background-color: #fff;
+        box-shadow: none;
+    }
+    .site-footer{
+        margin-top: 64px;
+        padding: 0px 0px;
+    }
+    .site-footer > div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    .site-footer > div:nth-child(1) > div:nth-child(2) > span{
+        margin: 0px 0px;
+    }
+    div ul{
+        display: flex;
+    }
+    div ul li:nth-child(1){
+        flex: 0.5;
+    }
+    .site-footer > div:nth-child(1) > div:nth-child(3){
+        margin: 0px 0px;
+    }
+    .site-footer > div:nth-child(1) > div:nth-child(3) > span{
+        margin: 0px 0px;
+    }
+    .site-footer > div:nth-child(1) > div ul{
+        margin-bottom: 16px;
+        gap: 10%;
+    }
+    .site-footer > div:nth-child(1) > div ul li > img{
+        width: 81px;
+        height: 30px;
+    }
+    .site-footer > div:nth-child(1) > div:nth-child(4) > div ul{
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+    .desc{
+        display: none;
+    }
+    /* MEDIA QUERIES INDEX.HTML END */
+}
+
+@media (max-width: 768px){
     html {
         overflow: hidden;
         height: 100%;
