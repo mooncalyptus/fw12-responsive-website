@@ -1045,7 +1045,7 @@ section.container-payment{
         margin-top: 72px;
     }
     section.join-member > .div-join{
-        background-color: #fff;
+        background-color: red;
         box-shadow: none;
     }
     .site-footer{
